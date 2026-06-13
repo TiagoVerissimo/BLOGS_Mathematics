@@ -1,0 +1,46 @@
+---
+title: "Visualizing Eigenvalues and Eigenvectors"
+author: "Tiago Verissimo"
+date: "2026-06-13"
+categories: [Linear Algebra, Geometry, Visualization]
+image: "thumbnail.png"
+---
+
+In linear algebra, linear transformations act on vectors, stretching, rotating, or shearing them. However, for every linear transformation, there exist special vectors that do not change their direction—only their scale. These are **eigenvectors**, and their corresponding scaling factors are **eigenvalues**.
+
+### The Mathematical Definition
+
+Let $A$ be an $n \times n$ matrix. A non-zero vector $v$ is an eigenvector of $A$ if:
+
+$$A v = \lambda v$$
+
+where $\lambda$ is a scalar known as the **eigenvalue** corresponding to the eigenvector $v$.
+
+### Geometric Intuition
+
+Imagine a transformation matrix $A$ applied to a grid of vectors in $\mathbb{R}^2$:
+
+$$A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$$
+
+If we multiply this matrix by a general vector, the vector changes both length and direction. However, if we choose the vector $v = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$:
+
+$$A v = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 3 \\ 3 \end{pmatrix} = 3 \begin{pmatrix} 1 \\ 1 \end{pmatrix}$$
+
+Here, the direction remains identical along the diagonal, and the vector is scaled by a factor of $\lambda = 3$.
+
+::: {.callout-note}
+### Key Takeaway
+Eigenvectors define the "characteristic directions" along which a linear transformation acts purely by scaling.
+:::
+
+In python, we can easily find eigenvalues and eigenvectors using `numpy.linalg.eig`:
+
+```{python}
+import numpy as np
+
+A = np.array([[2, 1], [1, 2]])
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+print("Eigenvalues:", eigenvalues)
+print("Eigenvectors:\n", eigenvectors)
+```

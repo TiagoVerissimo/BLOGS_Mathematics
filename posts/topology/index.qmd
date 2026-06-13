@@ -1,0 +1,39 @@
+---
+title: "Understanding the Fundamental Group"
+author: "Tiago Verissimo"
+date: "2026-06-11"
+categories: [Topology, Algebraic Topology]
+image: "thumbnail.png"
+---
+
+In algebraic topology, one of the most basic invariants used to study topological spaces is the **fundamental group**. It captures information about the 1-dimensional "holes" in a space by studying the behaviour of loops.
+
+### Intuition: Loops on a Surface
+
+Imagine placing a loop of string on a surface:
+* On a sphere (like a football), any loop you draw can be shrunk down continuously to a single point.
+* On a torus (the surface of a donut), a loop that wraps around the tube or around the central hole cannot be shrunk to a point without cutting the surface or the string.
+
+This distinction is formalized by the fundamental group, denoted $\pi_1(X, x_0)$.
+
+### Formal Definition
+
+Let $X$ be a topological space, and let $x_0 \in X$ be a basepoint. A **loop** based at $x_0$ is a continuous map $f: [0, 1] \to X$ such that $f(0) = f(1) = x_0$.
+
+Two loops $f$ and $g$ are **homotopic** (written $f \simeq g$) if there exists a continuous map (a homotopy) $H: [0, 1] \times [0, 1] \to X$ such that:
+* $H(s, 0) = f(s)$ for all $s \in [0, 1]$
+* $H(s, 1) = g(s)$ for all $s \in [0, 1]$
+* $H(0, t) = H(1, t) = x_0$ for all $t \in [0, 1]$
+
+The elements of the fundamental group $\pi_1(X, x_0)$ are the homotopy classes of loops, denoted $[f]$.
+
+The group operation is **concatenation** of loops (running one loop after the other at double speed):
+
+$$(f * g)(s) = \begin{cases} f(2s) & 0 \le s \le \frac{1}{2} \\ g(2s - 1) & \frac{1}{2} \le s \le 1 \end{cases}$$
+
+::: {.callout-important}
+### Algebraic Invariants
+If two spaces $X$ and $Y$ are homeomorphic, their fundamental groups are isomorphic:
+$$\pi_1(X, x_0) \cong \pi_1(Y, y_0)$$
+For instance, the fundamental group of a circle $S^1$ is isomorphic to the group of integers $\mathbb{Z}$, while the fundamental group of a sphere $S^2$ is trivial (the group containing only the identity).
+:::

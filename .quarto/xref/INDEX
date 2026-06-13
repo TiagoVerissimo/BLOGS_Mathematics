@@ -7,5 +7,14 @@
   },
   "posts/welcome/index.qmd": {
     "index.html": "86a9f1b2"
+  },
+  "posts/linear-algebra/index.qmd": {
+    "index.html": "055aa36d"
+  },
+  "posts/real-analysis/index.qmd": {
+    "index.html": "17241d6d"
+  },
+  "posts/topology/index.qmd": {
+    "index.html": "2cd41b4a"
   }
 }

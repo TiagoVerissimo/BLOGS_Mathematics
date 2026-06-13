@@ -1,8 +1,8 @@
 ---
-title: "About"
+title: "About Me"
 image: profile.png
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -15,4 +15,15 @@ about:
       href: https://github.com
 ---
 
-Welcome to my math blog! Here I share my explorations in mathematics, statistics, data science, and programming.
+Welcome to my mathematics blog! I am a mathematician, programmer, and educator passionate about making mathematical concepts visual, intuitive, and accessible. 
+
+Here, you'll find explorations in pure and applied mathematics, statistics, and programming. My goal is to bridge the gap between rigorous proof and intuitive visualization.
+
+## Education
+
+**University of Lisbon** | Lisbon, Portugal  
+*M.S. in Mathematics & Data Science* | 2024 - 2026
+
+**University of Coimbra** | Coimbra, Portugal  
+*B.S. in Mathematics* | 2021 - 2024
+

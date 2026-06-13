@@ -1,0 +1,181 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+/* CSS Custom Properties / Design Tokens */
+:root {
+  --primary-mint: #78c2ad;
+  --primary-mint-hover: #5bb39a;
+  --primary-mint-light: rgba(120, 194, 173, 0.15);
+  --bg-soft: #fcfefe;
+  --text-dark: #2c3e50;
+  --text-muted: #7f8c8d;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 15px -3px rgba(120, 194, 173, 0.1), 0 4px 6px -2px rgba(120, 194, 173, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(120, 194, 173, 0.15), 0 10px 10px -5px rgba(120, 194, 173, 0.08);
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+}
+
+/* Typography Overrides */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-soft);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .title {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Navbar Customization */
+.navbar {
+  border-bottom: 1px solid rgba(120, 194, 173, 0.2);
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.navbar-title, .navbar-brand, .nav-link {
+  color: var(--text-dark) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary-mint-hover) !important;
+  transform: translateY(-1px);
+}
+
+/* Hero / Header custom styling */
+header.quarto-title-block {
+  background: linear-gradient(135deg, rgba(120, 194, 173, 0.2) 0%, rgba(244, 251, 249, 0.8) 100%);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(120, 194, 173, 0.15);
+  box-shadow: var(--shadow-md);
+}
+
+.title-block-banner {
+  background: linear-gradient(135deg, rgba(120, 194, 173, 0.3) 0%, rgba(244, 251, 249, 0.9) 100%) !important;
+  border-bottom: 2px solid rgba(120, 194, 173, 0.2);
+}
+
+/* Grid layout & custom cards styling */
+.quarto-grid-item {
+  border: 1px solid rgba(120, 194, 173, 0.15) !important;
+  border-radius: var(--border-radius-md) !important;
+  background-color: #ffffff !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  overflow: hidden;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--primary-mint) !important;
+}
+
+.quarto-grid-item .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.quarto-grid-item:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.quarto-grid-item .card-body {
+  padding: 1.5rem !important;
+}
+
+/* Category Filter Badges / Pills styling */
+.quarto-category {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--primary-mint-light) !important;
+  color: var(--primary-mint-hover) !important;
+  border: 1px solid rgba(120, 194, 173, 0.3) !important;
+  padding: 0.35em 0.85em !important;
+  border-radius: 50px !important;
+  margin-right: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.quarto-category:hover, a.quarto-category:hover {
+  background-color: var(--primary-mint) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(120, 194, 173, 0.3);
+  text-decoration: none !important;
+}
+
+/* Custom categories container on the side/top */
+.quarto-listing-category-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--primary-mint);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.quarto-listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/* About Page Customization (trestles template style) */
+.about-entity {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(120, 194, 173, 0.05) 100%);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(120, 194, 173, 0.1);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-link {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  border-radius: 50px !important;
+  padding: 0.5rem 1.2rem !important;
+  border: 1px solid var(--primary-mint) !important;
+  color: var(--primary-mint-hover) !important;
+  transition: all 0.3s ease !important;
+}
+
+.about-link:hover {
+  background-color: var(--primary-mint) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(120, 194, 173, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Code block customization */
+pre, code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+div.sourceCode {
+  border-radius: var(--border-radius-sm);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Callout blocks custom styling */
+.callout {
+  border-left-color: var(--primary-mint) !important;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-soft);
+  border: 1px solid rgba(120, 194, 173, 0.15);
+  border-left-width: 5px !important;
+}

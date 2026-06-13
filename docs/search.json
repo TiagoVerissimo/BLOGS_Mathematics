@@ -1,23 +1,44 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/topology/index.html",
+    "href": "posts/topology/index.html",
+    "title": "Understanding the Fundamental Group",
     "section": "",
-    "text": "This is the first post in my new Quarto blog. Welcome!\nFor a demonstration of a line plot on a polar axis, see Figure 1.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+    "text": "In algebraic topology, one of the most basic invariants used to study topological spaces is the fundamental group. It captures information about the 1-dimensional “holes” in a space by studying the behaviour of loops.\n\nIntuition: Loops on a Surface\nImagine placing a loop of string on a surface: * On a sphere (like a football), any loop you draw can be shrunk down continuously to a single point. * On a torus (the surface of a donut), a loop that wraps around the tube or around the central hole cannot be shrunk to a point without cutting the surface or the string.\nThis distinction is formalized by the fundamental group, denoted \\(\\pi_1(X, x_0)\\).\n\n\nFormal Definition\nLet \\(X\\) be a topological space, and let \\(x_0 \\in X\\) be a basepoint. A loop based at \\(x_0\\) is a continuous map \\(f: [0, 1] \\to X\\) such that \\(f(0) = f(1) = x_0\\).\nTwo loops \\(f\\) and \\(g\\) are homotopic (written \\(f \\simeq g\\)) if there exists a continuous map (a homotopy) \\(H: [0, 1] \\times [0, 1] \\to X\\) such that: * \\(H(s, 0) = f(s)\\) for all \\(s \\in [0, 1]\\) * \\(H(s, 1) = g(s)\\) for all \\(s \\in [0, 1]\\) * \\(H(0, t) = H(1, t) = x_0\\) for all \\(t \\in [0, 1]\\)\nThe elements of the fundamental group \\(\\pi_1(X, x_0)\\) are the homotopy classes of loops, denoted \\([f]\\).\nThe group operation is concatenation of loops (running one loop after the other at double speed):\n\\[(f * g)(s) = \\begin{cases} f(2s) & 0 \\le s \\le \\frac{1}{2} \\\\ g(2s - 1) & \\frac{1}{2} \\le s \\le 1 \\end{cases}\\]\n\n\n\n\n\n\nImportantAlgebraic Invariants\n\n\n\nIf two spaces \\(X\\) and \\(Y\\) are homeomorphic, their fundamental groups are isomorphic: \\[\\pi_1(X, x_0) \\cong \\pi_1(Y, y_0)\\] For instance, the fundamental group of a circle \\(S^1\\) is isomorphic to the group of integers \\(\\mathbb{Z}\\), while the fundamental group of a sphere \\(S^2\\) is trivial (the group containing only the identity)."
+  },
+  {
+    "objectID": "posts/linear-algebra/index.html",
+    "href": "posts/linear-algebra/index.html",
+    "title": "Visualizing Eigenvalues and Eigenvectors",
+    "section": "",
+    "text": "In linear algebra, linear transformations act on vectors, stretching, rotating, or shearing them. However, for every linear transformation, there exist special vectors that do not change their direction—only their scale. These are eigenvectors, and their corresponding scaling factors are eigenvalues.\n\nThe Mathematical Definition\nLet \\(A\\) be an \\(n \\times n\\) matrix. A non-zero vector \\(v\\) is an eigenvector of \\(A\\) if:\n\\[A v = \\lambda v\\]\nwhere \\(\\lambda\\) is a scalar known as the eigenvalue corresponding to the eigenvector \\(v\\).\n\n\nGeometric Intuition\nImagine a transformation matrix \\(A\\) applied to a grid of vectors in \\(\\mathbb{R}^2\\):\n\\[A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\\]\nIf we multiply this matrix by a general vector, the vector changes both length and direction. However, if we choose the vector \\(v = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}\\):\n\\[A v = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix} = 3 \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}\\]\nHere, the direction remains identical along the diagonal, and the vector is scaled by a factor of \\(\\lambda = 3\\).\n\n\n\n\n\n\nNoteKey Takeaway\n\n\n\nEigenvectors define the “characteristic directions” along which a linear transformation acts purely by scaling.\n\n\nIn python, we can easily find eigenvalues and eigenvectors using numpy.linalg.eig:\n\n\nShow code\nimport numpy as np\n\nA = np.array([[2, 1], [1, 2]])\neigenvalues, eigenvectors = np.linalg.eig(A)\n\nprint(\"Eigenvalues:\", eigenvalues)\nprint(\"Eigenvectors:\\n\", eigenvectors)\n\n\nEigenvalues: [3. 1.]\nEigenvectors:\n [[ 0.70710678 -0.70710678]\n [ 0.70710678  0.70710678]]"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "Welcome to my math blog! Here I share my explorations in mathematics, statistics, data science, and programming."
+    "text": "Welcome to my mathematics blog! I am a mathematician, programmer, and educator passionate about making mathematical concepts visual, intuitive, and accessible.\nHere, you’ll find explorations in pure and applied mathematics, statistics, and programming. My goal is to bridge the gap between rigorous proof and intuitive visualization."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nUniversity of Lisbon | Lisbon, Portugal\nM.S. in Mathematics & Data Science | 2024 - 2026\nUniversity of Coimbra | Coimbra, Portugal\nB.S. in Mathematics | 2021 - 2024"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "My Math Blog",
+    "title": "Mathematical Explorations",
     "section": "",
-    "text": "Welcome To My Blog\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJun 13, 2026\n\n\nTiago\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my mathematical web space! Here, I share insights, proofs, visualizations, and guides across several core fields of mathematics.\nUse the categories filter on the right side (or at the top on mobile) to narrow down your reading to specific fields, such as Linear Algebra, Real Analysis, or Topology.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nVisualizing Eigenvalues and Eigenvectors\n\n2 min\n\n\nLinear Algebra\n\nGeometry\n\nVisualization\n\n\n\n\n\n\n\nJun 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Beauty of Lebesgue Integration\n\n2 min\n\n\nReal Analysis\n\nMeasure Theory\n\n\n\n\n\n\n\nJun 12, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding the Fundamental Group\n\n2 min\n\n\nTopology\n\nAlgebraic Topology\n\n\n\n\n\n\n\nJun 11, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/real-analysis/index.html",
+    "href": "posts/real-analysis/index.html",
+    "title": "The Beauty of Lebesgue Integration",
+    "section": "",
+    "text": "In classical calculus, the Riemann integral is defined by partitioning the domain (the \\(x\\)-axis) into small intervals and taking the sum of the areas of the resulting rectangles. While highly intuitive, the Riemann integral fails for highly discontinuous functions, such as the Dirichlet function.\nThe Lebesgue integral solves this by partitioning the range (the \\(y\\)-axis) instead of the domain.\n\nRiemann vs. Lebesgue: An Analogy\nSuppose you have a pile of coins of different values and want to count them: * Riemann Approach: You pick up the coins one by one in the order they lie on the table, adding each coin’s value to the running total. * Lebesgue Approach: You sort the coins by value (e.g., all \\(\\$1\\) coins together, all \\(\\$2\\) coins together) and then calculate the total sum by multiplying each value by the number of coins of that value.\n\n\nMathematical Formulation\nLet \\((X, \\mathcal{M}, \\mu)\\) be a measure space. For a simple function \\(s(x) = \\sum_{i=1}^n a_i \\chi_{A_i}(x)\\) (where \\(\\chi_{A_i}\\) is the indicator function of the measurable set \\(A_i\\)), the Lebesgue integral is defined as:\n\\[\\int_X s \\, d\\mu = \\sum_{i=1}^n a_i \\mu(A_i)\\]\nFor any non-negative measurable function \\(f: X \\to [0, \\infty]\\), we define its Lebesgue integral as the supremum of the integrals of simple functions under it:\n\\[\\int_X f \\, d\\mu = \\sup \\left\\{ \\int_X s \\, d\\mu : 0 \\le s \\le f, \\, s \\text{ is simple} \\right\\}\\]\n\n\n\n\n\n\nTipLebesgue’s Dominated Convergence Theorem\n\n\n\nOne of the primary advantages of Lebesgue integration is the ease with which limits and integrals can be interchanged under very mild conditions. If \\(f_n \\to f\\) pointwise, and \\(|f_n| \\le g\\) for a Lebesgue integrable function \\(g\\), then: \\[\\lim_{n\\to\\infty} \\int_X f_n \\, d\\mu = \\int_X f \\, d\\mu\\]"
   }
 ]

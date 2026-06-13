@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Tiago Verissimo">
+<meta name="dcterms.date" content="2026-06-12">
 
-<title>Mathematical Explorations – Tiago’s Mathematics Blog</title>
+<title>The Beauty of Lebesgue Integration – Tiago’s Mathematics Blog</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2e4282234db71b1757327a2e3fa42d3f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2e4282234db71b1757327a2e3fa42d3f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -132,17 +103,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Tiago’s Mathematics Blog</span>
     </a>
   </div>
@@ -153,11 +124,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -168,158 +139,87 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Mathematical Explorations</h1>
-            <p class="subtitle lead">A journey through algebra, analysis, topology, and beyond.</p>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QWxnZWJyYWljJTIwVG9wb2xvZ3k=">Algebraic Topology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VvbWV0cnk=">Geometry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGluZWFyJTIwQWxnZWJyYQ==">Linear Algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVhc3VyZSUyMFRoZW9yeQ==">Measure Theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhbCUyMEFuYWx5c2lz">Real Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VG9wb2xvZ3k=">Topology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VmlzdWFsaXphdGlvbg==">Visualization <span class="quarto-category-count">(1)</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-<p>Welcome to my mathematical web space! Here, I share insights, proofs, visualizations, and guides across several core fields of mathematics.</p>
-<p>Use the <strong>categories filter</strong> on the right side (or at the top on mobile) to narrow down your reading to specific fields, such as <strong>Linear Algebra</strong>, <strong>Real Analysis</strong>, or <strong>Topology</strong>.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#riemann-vs.-lebesgue-an-analogy" id="toc-riemann-vs.-lebesgue-an-analogy" class="nav-link active" data-scroll-target="#riemann-vs.-lebesgue-an-analogy">Riemann vs.&nbsp;Lebesgue: An Analogy</a></li>
+  <li><a href="#mathematical-formulation" id="toc-mathematical-formulation" class="nav-link" data-scroll-target="#mathematical-formulation">Mathematical Formulation</a></li>
+  </ul>
+</nav>
     </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TGluZWFyJTIwQWxnZWJyYSUyQ0dlb21ldHJ5JTJDVmlzdWFsaXphdGlvbg==" data-listing-date-sort="1781305200000" data-listing-file-modified-sort="1781382479382" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
-<a href="./posts/linear-algebra/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/linear-algebra/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Visualizing Eigenvalues and Eigenvectors
-</h5>
-<div class="listing-reading-time card-text text-muted">2 min</div>
-<div class="listing-categories">
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-<div class="listing-category" onclick="window.quartoListingCategory('TGluZWFyJTIwQWxnZWJyYQ=='); return false;">Linear Algebra</div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Beauty of Lebesgue Integration</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Real Analysis</div>
+    <div class="quarto-category">Measure Theory</div>
+  </div>
+  </div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('R2VvbWV0cnk='); return false;">Geometry</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('VmlzdWFsaXphdGlvbg=='); return false;">Visualization</div>
 
-</div>
-<div class="card-text listing-description delink">
-In linear algebra, linear transformations act on vectors, stretching, rotating, or shearing them. However, for every linear transformation, there exist special vectors that…<strong></strong><strong></strong>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jun 13, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWVhc3VyZSUyMFRoZW9yeQ==" data-listing-date-sort="1781218800000" data-listing-file-modified-sort="1781382503537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
-<a href="./posts/real-analysis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/real-analysis/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The Beauty of Lebesgue Integration
-</h5>
-<div class="listing-reading-time card-text text-muted">2 min</div>
-<div class="listing-categories">
+<div class="quarto-title-meta">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tiago Verissimo </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 12, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
-<div class="listing-category" onclick="window.quartoListingCategory('TWVhc3VyZSUyMFRoZW9yeQ=='); return false;">Measure Theory</div>
 
-</div>
-<div class="card-text listing-description delink">
-In classical calculus, the Riemann integral is defined by partitioning the domain (the <span class="math inline">\(x\)</span>-axis) into small intervals and taking the sum of the areas of the resulting…
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jun 12, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="VG9wb2xvZ3klMkNBbGdlYnJhaWMlMjBUb3BvbG9neQ==" data-listing-date-sort="1781132400000" data-listing-file-modified-sort="1781382525861" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="304">
-<a href="./posts/topology/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/topology/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Understanding the Fundamental Group
-</h5>
-<div class="listing-reading-time card-text text-muted">2 min</div>
-<div class="listing-categories">
+</header>
 
-<div class="listing-category" onclick="window.quartoListingCategory('VG9wb2xvZ3k='); return false;">Topology</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwVG9wb2xvZ3k='); return false;">Algebraic Topology</div>
+<p>In classical calculus, the Riemann integral is defined by partitioning the domain (the <span class="math inline">\(x\)</span>-axis) into small intervals and taking the sum of the areas of the resulting rectangles. While highly intuitive, the Riemann integral fails for highly discontinuous functions, such as the Dirichlet function.</p>
+<p>The Lebesgue integral solves this by partitioning the <strong>range</strong> (the <span class="math inline">\(y\)</span>-axis) instead of the domain.</p>
+<section id="riemann-vs.-lebesgue-an-analogy" class="level3">
+<h3 class="anchored" data-anchor-id="riemann-vs.-lebesgue-an-analogy">Riemann vs.&nbsp;Lebesgue: An Analogy</h3>
+<p>Suppose you have a pile of coins of different values and want to count them: * <strong>Riemann Approach</strong>: You pick up the coins one by one in the order they lie on the table, adding each coin’s value to the running total. * <strong>Lebesgue Approach</strong>: You sort the coins by value (e.g., all <span class="math inline">\(\$1\)</span> coins together, all <span class="math inline">\(\$2\)</span> coins together) and then calculate the total sum by multiplying each value by the number of coins of that value.</p>
+</section>
+<section id="mathematical-formulation" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-formulation">Mathematical Formulation</h3>
+<p>Let <span class="math inline">\((X, \mathcal{M}, \mu)\)</span> be a measure space. For a simple function <span class="math inline">\(s(x) = \sum_{i=1}^n a_i \chi_{A_i}(x)\)</span> (where <span class="math inline">\(\chi_{A_i}\)</span> is the indicator function of the measurable set <span class="math inline">\(A_i\)</span>), the Lebesgue integral is defined as:</p>
+<p><span class="math display">\[\int_X s \, d\mu = \sum_{i=1}^n a_i \mu(A_i)\]</span></p>
+<p>For any non-negative measurable function <span class="math inline">\(f: X \to [0, \infty]\)</span>, we define its Lebesgue integral as the supremum of the integrals of simple functions under it:</p>
+<p><span class="math display">\[\int_X f \, d\mu = \sup \left\{ \int_X s \, d\mu : 0 \le s \le f, \, s \text{ is simple} \right\}\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lebesgue’s Dominated Convergence Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>One of the primary advantages of Lebesgue integration is the ease with which limits and integrals can be interchanged under very mild conditions. If <span class="math inline">\(f_n \to f\)</span> pointwise, and <span class="math inline">\(|f_n| \le g\)</span> for a Lebesgue integrable function <span class="math inline">\(g\)</span>, then: <span class="math display">\[\lim_{n\to\infty} \int_X f_n \, d\mu = \int_X f \, d\mu\]</span></p>
+</div>
+</div>
 
-</div>
-<div class="card-text listing-description delink">
-In algebraic topology, one of the most basic invariants used to study topological spaces is the <strong>fundamental group</strong>. It captures information about the 1-dimensional “holes” in…
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jun 11, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

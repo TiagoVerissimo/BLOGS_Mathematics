@@ -3,10 +3,21 @@ project:
   output-dir: docs
 
 website:
-  title: "My Math Blog"
+  title: "Tiago's Mathematics Blog"
+  search: true
   navbar:
+    background: primary
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: About
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-summary: "Show code"
+

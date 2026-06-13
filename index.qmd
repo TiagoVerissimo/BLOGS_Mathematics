@@ -1,12 +1,19 @@
 ---
-title: "My Math Blog"
+title: "Mathematical Explorations"
+subtitle: "A journey through algebra, analysis, topology, and beyond."
 listing:
   contents: posts
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
-  sort-ui: false
-  filter-ui: false
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, reading-time, description, categories]
 page-layout: full
 title-block-banner: true
 ---
+
+Welcome to my mathematical web space! Here, I share insights, proofs, visualizations, and guides across several core fields of mathematics. 
+
+Use the **categories filter** on the right side (or at the top on mobile) to narrow down your reading to specific fields, such as **Linear Algebra**, **Real Analysis**, or **Topology**.
+

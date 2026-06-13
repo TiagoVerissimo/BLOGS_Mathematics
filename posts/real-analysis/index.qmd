@@ -1,0 +1,33 @@
+---
+title: "The Beauty of Lebesgue Integration"
+author: "Tiago Verissimo"
+date: "2026-06-12"
+categories: [Real Analysis, Measure Theory]
+image: "thumbnail.png"
+---
+
+In classical calculus, the Riemann integral is defined by partitioning the domain (the $x$-axis) into small intervals and taking the sum of the areas of the resulting rectangles. While highly intuitive, the Riemann integral fails for highly discontinuous functions, such as the Dirichlet function.
+
+The Lebesgue integral solves this by partitioning the **range** (the $y$-axis) instead of the domain.
+
+### Riemann vs. Lebesgue: An Analogy
+
+Suppose you have a pile of coins of different values and want to count them:
+* **Riemann Approach**: You pick up the coins one by one in the order they lie on the table, adding each coin's value to the running total.
+* **Lebesgue Approach**: You sort the coins by value (e.g., all $\$1$ coins together, all $\$2$ coins together) and then calculate the total sum by multiplying each value by the number of coins of that value.
+
+### Mathematical Formulation
+
+Let $(X, \mathcal{M}, \mu)$ be a measure space. For a simple function $s(x) = \sum_{i=1}^n a_i \chi_{A_i}(x)$ (where $\chi_{A_i}$ is the indicator function of the measurable set $A_i$), the Lebesgue integral is defined as:
+
+$$\int_X s \, d\mu = \sum_{i=1}^n a_i \mu(A_i)$$
+
+For any non-negative measurable function $f: X \to [0, \infty]$, we define its Lebesgue integral as the supremum of the integrals of simple functions under it:
+
+$$\int_X f \, d\mu = \sup \left\{ \int_X s \, d\mu : 0 \le s \le f, \, s \text{ is simple} \right\}$$
+
+::: {.callout-tip}
+### Lebesgue's Dominated Convergence Theorem
+One of the primary advantages of Lebesgue integration is the ease with which limits and integrals can be interchanged under very mild conditions. If $f_n \to f$ pointwise, and $|f_n| \le g$ for a Lebesgue integrable function $g$, then:
+$$\lim_{n\to\infty} \int_X f_n \, d\mu = \int_X f \, d\mu$$
+:::

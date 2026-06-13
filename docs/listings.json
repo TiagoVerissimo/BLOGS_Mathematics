@@ -2,7 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html"
+      "/posts/linear-algebra/index.html",
+      "/posts/real-analysis/index.html",
+      "/posts/topology/index.html"
     ]
   }
 ]
