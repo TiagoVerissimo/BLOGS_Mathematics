@@ -1,12 +1,13 @@
 ---
-title: "About Me"
+title: "Tiago Verissimo"
+subtitle: "*Mathematician, Programmer, and Educator*"
 image: profile.png
 about:
   template: trestles
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
+    - icon: reddit
+      text: Reddit
+      href: https://reddit.com
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com

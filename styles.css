@@ -6,10 +6,10 @@
   --primary-mint: #78c2ad;
   --primary-mint-hover: #96d2c2;
   --primary-mint-light: rgba(120, 194, 173, 0.12);
-  --bg-soft: #05080c;           /* Pure dark space background */
-  --bg-card: #0e1320;           /* Elevated card background */
-  --bg-navbar: rgba(5, 8, 12, 0.8);
-  --text-dark: #f8fafc;         /* Bright light slate for body text */
+  --bg-soft: #080d20;           /* Deep space blue background */
+  --bg-card: #0f162a;           /* Elevated space blue card background */
+  --bg-navbar: rgba(8, 13, 32, 0.8);
+  --text-dark: #f1f5f9;         /* Bright cool slate for body text */
   --text-muted: #94a3b8;        /* Slate-400 for secondary text */
   
   --border-color: rgba(120, 194, 173, 0.15);
@@ -26,16 +26,16 @@
 
 /* Base resets & typography */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   color: var(--text-dark);
   background-color: var(--bg-soft);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand, .title {
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: #ffffff !important;
 }
 
@@ -160,6 +160,41 @@ header.quarto-title-block {
   text-decoration: none !important;
 }
 
+/* Card Category Badges Container & Pills spacing */
+.quarto-grid-item .listing-categories {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.35rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  padding: 0 !important;
+}
+
+.quarto-grid-item .listing-category {
+  font-family: 'Georgia', Georgia, serif !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  background-color: var(--primary-mint-light) !important;
+  color: var(--primary-mint) !important;
+  border: 1px solid rgba(120, 194, 173, 0.2) !important;
+  padding: 0.2rem 0.5rem !important;
+  border-radius: 50px !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.quarto-grid-item .listing-category:hover {
+  background-color: var(--primary-mint) !important;
+  color: var(--bg-soft) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(120, 194, 173, 0.2) !important;
+  text-decoration: none !important;
+}
+
+
 /* Custom categories container on the side/top */
 .quarto-listing-category-title {
   font-family: 'Outfit', sans-serif;
@@ -177,17 +212,21 @@ header.quarto-title-block {
 }
 
 /* About Page Customization (trestles template style) */
+.quarto-about-trestles {
+  align-items: flex-start !important;
+}
+
 .about-entity {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(5,8,12,0) 0%, rgba(120, 194, 173, 0.03) 100%);
+  background: linear-gradient(180deg, rgba(8, 13, 32, 0) 0%, rgba(120, 194, 173, 0.03) 100%);
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
 }
 
 .about-link {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Georgia', Georgia, serif;
   font-weight: 600;
   border-radius: 50px !important;
   padding: 0.5rem 1.2rem !important;
@@ -210,7 +249,7 @@ pre, code {
 }
 
 div.sourceCode {
-  background-color: #0a0d16 !important;
+  background-color: #0c1125 !important;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-sm);
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
