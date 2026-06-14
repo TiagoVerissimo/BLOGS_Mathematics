@@ -41,10 +41,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ccafe2c99a4564d55934ca8539ca9f46.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b09bf993178e02b07e92a3d53a346d45.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-adf415b0f2f503070d2103e970182c51.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-linear-algebra .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -84,11 +84,67 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-linear-algebra'] = new List('listing-linear-algebra', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-real-analysis .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-real-analysis'] = new List('listing-real-analysis', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-topology .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-topology'] = new List('listing-topology', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -189,8 +245,16 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QWxnZWJyYWljJTIwVG9wb2xvZ3k=">Algebraic Topology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VvbWV0cnk=">Geometry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGluZWFyJTIwQWxnZWJyYQ==">Linear Algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVhc3VyZSUyMFRoZW9yeQ==">Measure Theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhbCUyMEFuYWx5c2lz">Real Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VG9wb2xvZ3k=">Topology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VmlzdWFsaXphdGlvbg==">Visualization <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#linear-algebra" id="toc-linear-algebra" class="nav-link active" data-scroll-target="#linear-algebra">Linear Algebra</a></li>
+  <li><a href="#real-analysis" id="toc-real-analysis" class="nav-link" data-scroll-target="#real-analysis">Real Analysis</a></li>
+  <li><a href="#topology" id="toc-topology" class="nav-link" data-scroll-target="#topology">Topology</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -199,46 +263,20 @@ window.Quarto = {
 
 
 <p>Welcome to my mathematical web space! Here, I share insights, proofs, visualizations, and guides across several core fields of mathematics.</p>
-<p>Use the <strong>categories filter</strong> on the right side (or at the top on mobile) to narrow down your reading to specific fields, such as <strong>Linear Algebra</strong>, <strong>Real Analysis</strong>, or <strong>Topology</strong>.</p>
+<section id="linear-algebra" class="level2">
+<h2 class="anchored" data-anchor-id="linear-algebra">Linear Algebra</h2>
+<div id="listing-linear-algebra" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="TGluZWFyJTIwQWxnZWJyYSUyQ0dlb21ldHJ5JTJDVmlzdWFsaXphdGlvbg==" data-listing-date-sort="1781305200000" data-listing-file-modified-sort="1781383237078" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
+<div class="thumbnail"><a href="./posts/linear-algebra/index.html" class="no-external">
 
+<img loading="lazy" src="./posts/linear-algebra/thumbnail.png" class="thumbnail-image">
 
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TGluZWFyJTIwQWxnZWJyYSUyQ0dlb21ldHJ5JTJDVmlzdWFsaXphdGlvbg==" data-listing-date-sort="1781305200000" data-listing-file-modified-sort="1781383237078" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
-<a href="./posts/linear-algebra/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/linear-algebra/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Visualizing Eigenvalues and Eigenvectors
-</h5>
-<div class="listing-reading-time card-text text-muted">2 min</div>
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/linear-algebra/index.html" class="no-external">Visualizing Eigenvalues and Eigenvectors</a>
+</h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('TGluZWFyJTIwQWxnZWJyYQ=='); return false;">Linear Algebra</div>
@@ -248,28 +286,37 @@ Visualizing Eigenvalues and Eigenvectors
 <div class="listing-category" onclick="window.quartoListingCategory('VmlzdWFsaXphdGlvbg=='); return false;">Visualization</div>
 
 </div>
-<div class="card-text listing-description delink">
+<div class="delink listing-description"><a href="./posts/linear-algebra/index.html" class="no-external">
 In linear algebra, linear transformations act on vectors, stretching, rotating, or shearing them. However, for every linear transformation, there exist special vectors that…<strong></strong><strong></strong>
+</a></div>
 </div>
-<div class="card-attribution card-text-small end">
+<div class="metadata">
+<a href="./posts/linear-algebra/index.html" class="no-external">
 <div class="listing-date">
 Jun 13, 2026
 </div>
+<div class="listing-reading-time">2 min</div>
+</a>
 </div>
 </div>
-</div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWVhc3VyZSUyMFRoZW9yeQ==" data-listing-date-sort="1781218800000" data-listing-file-modified-sort="1781396728225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
-<a href="./posts/real-analysis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/real-analysis/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The Beauty of Lebesgue Integration
-</h5>
-<div class="listing-reading-time card-text text-muted">2 min</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="real-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="real-analysis">Real Analysis</h2>
+<div id="listing-real-analysis" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWVhc3VyZSUyMFRoZW9yeQ==" data-listing-date-sort="1781218800000" data-listing-file-modified-sort="1781396728225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
+<div class="thumbnail"><a href="./posts/real-analysis/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/real-analysis/thumbnail.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/real-analysis/index.html" class="no-external">The Beauty of Lebesgue Integration</a>
+</h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
@@ -277,28 +324,37 @@ The Beauty of Lebesgue Integration
 <div class="listing-category" onclick="window.quartoListingCategory('TWVhc3VyZSUyMFRoZW9yeQ=='); return false;">Measure Theory</div>
 
 </div>
-<div class="card-text listing-description delink">
+<div class="delink listing-description"><a href="./posts/real-analysis/index.html" class="no-external">
 In classical calculus, the Riemann integral is defined by partitioning the domain (the <span class="math inline">\(x\)</span>-axis) into small intervals and taking the sum of the areas of the resulting…
+</a></div>
 </div>
-<div class="card-attribution card-text-small end">
+<div class="metadata">
+<a href="./posts/real-analysis/index.html" class="no-external">
 <div class="listing-date">
 Jun 12, 2026
 </div>
+<div class="listing-reading-time">2 min</div>
+</a>
 </div>
 </div>
-</div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="VG9wb2xvZ3klMkNBbGdlYnJhaWMlMjBUb3BvbG9neQ==" data-listing-date-sort="1781132400000" data-listing-file-modified-sort="1781382525861" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="304">
-<a href="./posts/topology/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/topology/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Understanding the Fundamental Group
-</h5>
-<div class="listing-reading-time card-text text-muted">2 min</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="topology" class="level2">
+<h2 class="anchored" data-anchor-id="topology">Topology</h2>
+<div id="listing-topology" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="VG9wb2xvZ3klMkNBbGdlYnJhaWMlMjBUb3BvbG9neQ==" data-listing-date-sort="1781132400000" data-listing-file-modified-sort="1781382525861" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="304">
+<div class="thumbnail"><a href="./posts/topology/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/topology/thumbnail.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/topology/index.html" class="no-external">Understanding the Fundamental Group</a>
+</h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('VG9wb2xvZ3k='); return false;">Topology</div>
@@ -306,20 +362,28 @@ Understanding the Fundamental Group
 <div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwVG9wb2xvZ3k='); return false;">Algebraic Topology</div>
 
 </div>
-<div class="card-text listing-description delink">
+<div class="delink listing-description"><a href="./posts/topology/index.html" class="no-external">
 In algebraic topology, one of the most basic invariants used to study topological spaces is the <strong>fundamental group</strong>. It captures information about the 1-dimensional “holes” in…
+</a></div>
 </div>
-<div class="card-attribution card-text-small end">
+<div class="metadata">
+<a href="./posts/topology/index.html" class="no-external">
 <div class="listing-date">
 Jun 11, 2026
 </div>
+<div class="listing-reading-time">2 min</div>
+</a>
 </div>
-</div>
-</div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

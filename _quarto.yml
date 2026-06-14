@@ -20,5 +20,5 @@ format:
     toc: true
     code-fold: true
     code-summary: "Show code"
-    highlight-style: dracula
+    highlight-style: github
 

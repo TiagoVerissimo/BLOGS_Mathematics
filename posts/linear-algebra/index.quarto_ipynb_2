@@ -41,7 +41,7 @@
         "\n",
         "In python, we can easily find eigenvalues and eigenvectors using `numpy.linalg.eig`:"
       ],
-      "id": "c136ce5b"
+      "id": "de80da18"
     },
     {
       "cell_type": "code",
@@ -55,7 +55,7 @@
         "print(\"Eigenvalues:\", eigenvalues)\n",
         "print(\"Eigenvectors:\\n\", eigenvectors)"
       ],
-      "id": "2e69d25f",
+      "id": "aca1629d",
       "execution_count": null,
       "outputs": []
     }

@@ -2,18 +2,45 @@
 title: "Mathematical Explorations"
 subtitle: "A journey through algebra, analysis, topology, and beyond."
 listing:
-  contents: posts
-  sort: "date desc"
-  type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [image, date, title, reading-time, description, categories]
+  - id: linear-algebra
+    contents: posts/linear-algebra/*.qmd
+    sort: "date desc"
+    type: default
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [image, date, title, reading-time, description, categories]
+  - id: real-analysis
+    contents: posts/real-analysis/*.qmd
+    sort: "date desc"
+    type: default
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [image, date, title, reading-time, description, categories]
+  - id: topology
+    contents: posts/topology/*.qmd
+    sort: "date desc"
+    type: default
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [image, date, title, reading-time, description, categories]
 page-layout: full
 title-block-banner: true
 ---
 
 Welcome to my mathematical web space! Here, I share insights, proofs, visualizations, and guides across several core fields of mathematics. 
 
-Use the **categories filter** on the right side (or at the top on mobile) to narrow down your reading to specific fields, such as **Linear Algebra**, **Real Analysis**, or **Topology**.
+## Linear Algebra
+::: {#linear-algebra}
+:::
+
+## Real Analysis
+::: {#real-analysis}
+:::
+
+## Topology
+::: {#topology}
+:::
 

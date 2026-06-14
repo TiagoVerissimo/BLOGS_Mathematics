@@ -28,11 +28,39 @@
     "text": "Education\nUniversity of Lisbon | Lisbon, Portugal\nM.S. in Mathematics & Data Science | 2024 - 2026\nUniversity of Coimbra | Coimbra, Portugal\nB.S. in Mathematics | 2021 - 2024"
   },
   {
+    "objectID": "about.html#academic-publications",
+    "href": "about.html#academic-publications",
+    "title": "Tiago Verissimo",
+    "section": "Academic Publications",
+    "text": "Academic Publications\n\nA Geometric Approach to Higher-Dimensional Eigenvalue Problems\nTiago Verissimo, J. Silva, & A. Santos. Journal of Mathematical Visualization, 2025.\n[Journal Article] | [arXiv Preprint] | [Code Repository]\nMeasure Theory and Non-Standard Integrals in Topological Spaces\nTiago Verissimo. Proceedings of the Portuguese Mathematical Society, 2024.\n[Conference Paper] | [Presentation Slides]"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Mathematical Explorations",
     "section": "",
-    "text": "Welcome to my mathematical web space! Here, I share insights, proofs, visualizations, and guides across several core fields of mathematics.\nUse the categories filter on the right side (or at the top on mobile) to narrow down your reading to specific fields, such as Linear Algebra, Real Analysis, or Topology.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nVisualizing Eigenvalues and Eigenvectors\n\n2 min\n\n\nLinear Algebra\n\nGeometry\n\nVisualization\n\n\n\n\n\n\n\nJun 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Beauty of Lebesgue Integration\n\n2 min\n\n\nReal Analysis\n\nMeasure Theory\n\n\n\n\n\n\n\nJun 12, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding the Fundamental Group\n\n2 min\n\n\nTopology\n\nAlgebraic Topology\n\n\n\n\n\n\n\nJun 11, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my mathematical web space! Here, I share insights, proofs, visualizations, and guides across several core fields of mathematics."
+  },
+  {
+    "objectID": "index.html#linear-algebra",
+    "href": "index.html#linear-algebra",
+    "title": "Mathematical Explorations",
+    "section": "Linear Algebra",
+    "text": "Linear Algebra\n\n\n\n\n\n\n\n\n\n\nVisualizing Eigenvalues and Eigenvectors\n\n\n\nLinear Algebra\n\nGeometry\n\nVisualization\n\n\n\n\n\n\n\n\n\nJun 13, 2026\n\n2 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#real-analysis",
+    "href": "index.html#real-analysis",
+    "title": "Mathematical Explorations",
+    "section": "Real Analysis",
+    "text": "Real Analysis\n\n\n\n\n\n\n\n\n\n\nThe Beauty of Lebesgue Integration\n\n\n\nReal Analysis\n\nMeasure Theory\n\n\n\n\n\n\n\n\n\nJun 12, 2026\n\n2 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#topology",
+    "href": "index.html#topology",
+    "title": "Mathematical Explorations",
+    "section": "Topology",
+    "text": "Topology\n\n\n\n\n\n\n\n\n\n\nUnderstanding the Fundamental Group\n\n\n\nTopology\n\nAlgebraic Topology\n\n\n\n\n\n\n\n\n\nJun 11, 2026\n\n2 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/real-analysis/index.html",

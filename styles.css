@@ -1,42 +1,40 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
-/* CSS Custom Properties / Design Tokens for Dark Theme */
+/* CSS Custom Properties / Design Tokens for Light Minty Theme */
 :root {
   --primary-mint: #78c2ad;
-  --primary-mint-hover: #96d2c2;
-  --primary-mint-light: rgba(120, 194, 173, 0.12);
-  --bg-soft: #080d20;           /* Deep space blue background */
-  --bg-card: #0f162a;           /* Elevated space blue card background */
-  --bg-navbar: rgba(8, 13, 32, 0.8);
-  --text-dark: #f1f5f9;         /* Bright cool slate for body text */
-  --text-muted: #94a3b8;        /* Slate-400 for secondary text */
+  --primary-mint-hover: #56b499;
+  --primary-mint-light: rgba(120, 194, 173, 0.1);
+  --bg-soft: #f8f9fa;           /* Light background */
+  --bg-card: #ffffff;           /* White card background */
+  --text-dark: #2c3e50;         /* Dark text */
+  --text-muted: #6c757d;        /* Muted text */
   
-  --border-color: rgba(120, 194, 173, 0.15);
-  --border-color-focus: rgba(120, 194, 173, 0.40);
+  --border-color: rgba(120, 194, 173, 0.25);
   
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
   
   --border-radius-sm: 8px;
-  --border-radius-md: 16px;
-  --border-radius-lg: 24px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
 }
 
 /* Base resets & typography */
 body {
-  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--text-dark);
   background-color: var(--bg-soft);
   line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand, .title {
-  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #ffffff !important;
+  color: var(--text-dark) !important;
 }
 
 /* Hyperlinks */
@@ -51,28 +49,15 @@ a:hover {
   text-decoration: none;
 }
 
-/* Navbar Customization (Dark Glassmorphic) */
+/* Navbar Customization - Reverted to default Minty theme styles (Mint Green background, white text) */
 .navbar {
-  border-bottom: 1px solid var(--border-color);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background-color: var(--bg-navbar) !important;
   box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.navbar-title, .navbar-brand, .nav-link {
-  color: var(--text-dark) !important;
-}
-
-.nav-link:hover {
-  color: var(--primary-mint) !important;
-  transform: translateY(-1px);
-}
-
-/* Hero / Header custom styling */
+/* Hero / Header custom styling - Light theme */
 header.quarto-title-block {
-  background: linear-gradient(135deg, rgba(120, 194, 173, 0.08) 0%, rgba(14, 19, 32, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(120, 194, 173, 0.12) 0%, rgba(255, 255, 255, 0.9) 100%);
   border-radius: var(--border-radius-lg);
   padding: 3rem 2rem;
   margin-bottom: 3rem;
@@ -81,15 +66,15 @@ header.quarto-title-block {
 }
 
 .quarto-title-banner, .title-block-banner {
-  background: linear-gradient(135deg, rgba(120, 194, 173, 0.05) 0%, rgba(10, 13, 22, 0.95) 100%) !important;
+  background: linear-gradient(135deg, rgba(120, 194, 173, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
   border-bottom: 1px solid var(--border-color) !important;
 }
 
 .quarto-title-banner h1, .quarto-title-banner .subtitle {
-  color: #ffffff !important;
+  color: var(--text-dark) !important;
 }
 
-/* Grid layout & custom cards styling */
+/* Grid layout & custom cards styling - Light theme */
 .quarto-grid-item {
   border: 1px solid var(--border-color) !important;
   border-radius: var(--border-radius-md) !important;
@@ -101,8 +86,8 @@ header.quarto-title-block {
 
 .quarto-grid-item:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg) !important;
-  border-color: rgba(120, 194, 173, 0.4) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--primary-mint) !important;
 }
 
 .quarto-grid-item .card-img-top {
@@ -121,7 +106,7 @@ header.quarto-title-block {
 .quarto-grid-item .card-title, 
 .quarto-grid-item .listing-title,
 .quarto-grid-item a {
-  color: #ffffff !important;
+  color: var(--text-dark) !important;
 }
 
 .quarto-grid-item .card-text,
@@ -154,53 +139,18 @@ header.quarto-title-block {
 
 .quarto-category:hover, a.quarto-category:hover {
   background-color: var(--primary-mint) !important;
-  color: var(--bg-soft) !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(120, 194, 173, 0.3);
   text-decoration: none !important;
 }
-
-/* Card Category Badges Container & Pills spacing */
-.quarto-grid-item .listing-categories {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 0.35rem !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-  padding: 0 !important;
-}
-
-.quarto-grid-item .listing-category {
-  font-family: 'Georgia', Georgia, serif !important;
-  font-size: 0.65rem !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  background-color: var(--primary-mint-light) !important;
-  color: var(--primary-mint) !important;
-  border: 1px solid rgba(120, 194, 173, 0.2) !important;
-  padding: 0.2rem 0.5rem !important;
-  border-radius: 50px !important;
-  margin: 0 !important;
-  cursor: pointer !important;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-}
-
-.quarto-grid-item .listing-category:hover {
-  background-color: var(--primary-mint) !important;
-  color: var(--bg-soft) !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 8px rgba(120, 194, 173, 0.2) !important;
-  text-decoration: none !important;
-}
-
 
 /* Custom categories container on the side/top */
 .quarto-listing-category-title {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   color: var(--text-dark);
-  border-bottom: 1px solid rgba(120, 194, 173, 0.3);
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -211,7 +161,7 @@ header.quarto-title-block {
   gap: 0.25rem;
 }
 
-/* About Page Customization (trestles template style) */
+/* About Page Customization */
 .quarto-about-trestles {
   align-items: flex-start !important;
 }
@@ -219,14 +169,14 @@ header.quarto-title-block {
 .about-entity {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(8, 13, 32, 0) 0%, rgba(120, 194, 173, 0.03) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(120, 194, 173, 0.05) 100%);
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
 }
 
 .about-link {
-  font-family: 'Georgia', Georgia, serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 600;
   border-radius: 50px !important;
   padding: 0.5rem 1.2rem !important;
@@ -237,29 +187,16 @@ header.quarto-title-block {
 
 .about-link:hover {
   background-color: var(--primary-mint) !important;
-  color: var(--bg-soft) !important;
+  color: white !important;
   box-shadow: 0 4px 12px rgba(120, 194, 173, 0.25);
   transform: translateY(-2px);
-}
-
-/* Code block customization */
-pre, code {
-  font-family: 'Fira Code', monospace;
-  font-size: 0.9em;
-}
-
-div.sourceCode {
-  background-color: #0c1125 !important;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-sm);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Callout blocks custom styling */
 .callout {
   border-left-color: var(--primary-mint) !important;
   border-radius: var(--border-radius-sm);
-  background-color: var(--bg-card) !important;
+  background-color: var(--bg-soft) !important;
   border: 1px solid var(--border-color) !important;
   border-left-width: 5px !important;
   color: var(--text-dark) !important;
@@ -267,14 +204,14 @@ div.sourceCode {
 
 .callout-header {
   background-color: rgba(120, 194, 173, 0.08) !important;
-  color: #ffffff !important;
+  color: var(--text-dark) !important;
   border-bottom: 1px solid var(--border-color) !important;
   padding: 0.75rem 1rem !important;
 }
 
 .callout-title-container {
   font-weight: 600;
-  color: #ffffff !important;
+  color: var(--text-dark) !important;
 }
 
 .callout-icon-container {
@@ -304,52 +241,4 @@ div.sourceCode {
 #TOC .active {
   color: var(--primary-mint) !important;
   font-weight: 600;
-}
-
-/* Quarto Search Modal Dark Adjustments */
-.modal-content {
-  background-color: var(--bg-card) !important;
-  border: 1px solid var(--border-color) !important;
-  color: var(--text-dark) !important;
-}
-
-.modal-header, .modal-footer {
-  border-color: var(--border-color) !important;
-}
-
-.search-results {
-  background-color: var(--bg-card) !important;
-}
-
-.search-item {
-  border-bottom: 1px solid var(--border-color) !important;
-  color: var(--text-dark) !important;
-}
-
-.search-item:hover {
-  background-color: var(--primary-mint-light) !important;
-}
-
-.form-control, .search-input {
-  background-color: var(--bg-soft) !important;
-  border: 1px solid var(--border-color) !important;
-  color: var(--text-dark) !important;
-}
-
-.form-control:focus, .search-input:focus {
-  border-color: var(--primary-mint) !important;
-  box-shadow: 0 0 0 0.25rem rgba(120, 194, 173, 0.25) !important;
-  background-color: var(--bg-soft) !important;
-  color: var(--text-dark) !important;
-}
-
-/* Footer Customization */
-footer {
-  border-top: 1px solid var(--border-color) !important;
-  background-color: var(--bg-soft) !important;
-  color: var(--text-muted) !important;
-}
-
-footer a {
-  color: var(--primary-mint) !important;
 }

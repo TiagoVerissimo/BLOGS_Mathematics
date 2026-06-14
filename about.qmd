@@ -1,9 +1,9 @@
 ---
 title: "Tiago Verissimo"
 subtitle: "*Mathematician, Programmer, and Educator*"
-image: profile.png
+page-layout: full
 about:
-  template: trestles
+  template: solana
   links:
     - icon: reddit
       text: Reddit
@@ -14,6 +14,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com
+    - icon: medium
+      text: Medium
+      href: https://medium.com
 ---
 
 Welcome to my mathematics blog! I am a mathematician, programmer, and educator passionate about making mathematical concepts visual, intuitive, and accessible. 
@@ -27,4 +30,14 @@ Here, you'll find explorations in pure and applied mathematics, statistics, and 
 
 **University of Coimbra** | Coimbra, Portugal  
 *B.S. in Mathematics* | 2021 - 2024
+
+## Academic Publications
+
+* **A Geometric Approach to Higher-Dimensional Eigenvalue Problems**  
+  *Tiago Verissimo*, J. Silva, & A. Santos. *Journal of Mathematical Visualization*, 2025.  
+  [[Journal Article]](#) | [[arXiv Preprint]](#) | [[Code Repository]](https://github.com)
+
+* **Measure Theory and Non-Standard Integrals in Topological Spaces**  
+  *Tiago Verissimo*. *Proceedings of the Portuguese Mathematical Society*, 2024.  
+  [[Conference Paper]](#) | [[Presentation Slides]](#)
 
