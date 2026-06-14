@@ -1,43 +1,41 @@
 ---
 title: "Tiago Verissimo"
-subtitle: "*Mathematician, Programmer, and Educator*"
+subtitle: "*Mathematician that can code, sometimes*"
 page-layout: full
 about:
   template: solana
   links:
     - icon: reddit
       text: Reddit
-      href: https://reddit.com
+      href: https://www.reddit.com/user/Tiago_Verissimo/
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/tiagoverissimo
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/TiagoVerissimo
     - icon: medium
       text: Medium
-      href: https://medium.com
+      href: https://medium.com/@tiagoverissimokrypton
 ---
 
-Welcome to my mathematics blog! I am a mathematician, programmer, and educator passionate about making mathematical concepts visual, intuitive, and accessible. 
+I am a PhD Student in Mathematics at Newcastle University, working in Multivariate Truncated Moment Problems at the moment (no pun intended). I plan to work in different things in the future, but who knows.
 
-Here, you'll find explorations in pure and applied mathematics, statistics, and programming. My goal is to bridge the gap between rigorous proof and intuitive visualization.
+Here, you'll find explorations in pure, applied and computational mathematics. Sometimes I will go into other topics such as computer science, philosophy and mathematical pedagogy.
 
 ## Education
 
-**University of Lisbon** | Lisbon, Portugal  
-*M.S. in Mathematics & Data Science* | 2024 - 2026
+**Newcastle University** | Newcastle upon Tyne, UK  
+*PhD in Pure Mathematics* | 2024 - 2028
 
-**University of Coimbra** | Coimbra, Portugal  
-*B.S. in Mathematics* | 2021 - 2024
+**Stockholm University and KTH Royal Institute of Technology** | Stockholm, Sweden  
+*MSc in Mathematics* | 2022 - 2024
+
+**Univeristy of Lisbon** | Lisbon, Portugal  
+*BSc in Applied Mathematics* | 2019 - 2022
 
 ## Academic Publications
 
-* **A Geometric Approach to Higher-Dimensional Eigenvalue Problems**  
-  *Tiago Verissimo*, J. Silva, & A. Santos. *Journal of Mathematical Visualization*, 2025.  
-  [[Journal Article]](#) | [[arXiv Preprint]](#) | [[Code Repository]](https://github.com)
-
-* **Measure Theory and Non-Standard Integrals in Topological Spaces**  
-  *Tiago Verissimo*. *Proceedings of the Portuguese Mathematical Society*, 2024.  
-  [[Conference Paper]](#) | [[Presentation Slides]](#)
+* **Extension of Symmetries in the Expanding Universe**  
+  Mesquita Santos Verissimo, Tiago, 2024. Master’s Thesis. KTH Royal Institute of Technology and Stockholm University, Stockholm. [[Master's Thesis](https://kth.diva-portal.org/smash/record.jsf?aq2=%5B%5B%5D%5D&c=21&af=%5B%5D&searchType=LIST_LATEST&sortOrder2=title_sort_asc&query=&language=sv&pid=diva2%3A1917410&aq=%5B%5B%5D%5D&sf=all&aqe=%5B%5D&sortOrder=author_sort_asc&onlyFullText=false&noOfRows=50&dswid=3619)]
 
