@@ -1,23 +1,30 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
-/* CSS Custom Properties / Design Tokens */
+/* CSS Custom Properties / Design Tokens for Dark Theme */
 :root {
   --primary-mint: #78c2ad;
-  --primary-mint-hover: #5bb39a;
-  --primary-mint-light: rgba(120, 194, 173, 0.15);
-  --bg-soft: #fcfefe;
-  --text-dark: #2c3e50;
-  --text-muted: #7f8c8d;
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 10px 15px -3px rgba(120, 194, 173, 0.1), 0 4px 6px -2px rgba(120, 194, 173, 0.05);
-  --shadow-lg: 0 20px 25px -5px rgba(120, 194, 173, 0.15), 0 10px 10px -5px rgba(120, 194, 173, 0.08);
+  --primary-mint-hover: #96d2c2;
+  --primary-mint-light: rgba(120, 194, 173, 0.12);
+  --bg-soft: #05080c;           /* Pure dark space background */
+  --bg-card: #0e1320;           /* Elevated card background */
+  --bg-navbar: rgba(5, 8, 12, 0.8);
+  --text-dark: #f8fafc;         /* Bright light slate for body text */
+  --text-muted: #94a3b8;        /* Slate-400 for secondary text */
+  
+  --border-color: rgba(120, 194, 173, 0.15);
+  --border-color-focus: rgba(120, 194, 173, 0.40);
+  
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+  
   --border-radius-sm: 8px;
   --border-radius-md: 16px;
   --border-radius-lg: 24px;
 }
 
-/* Typography Overrides */
+/* Base resets & typography */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--text-dark);
@@ -29,13 +36,27 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .title {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: #ffffff !important;
 }
 
-/* Navbar Customization */
+/* Hyperlinks */
+a {
+  color: var(--primary-mint);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-mint-hover);
+  text-decoration: none;
+}
+
+/* Navbar Customization (Dark Glassmorphic) */
 .navbar {
-  border-bottom: 1px solid rgba(120, 194, 173, 0.2);
-  backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: var(--bg-navbar) !important;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
@@ -45,39 +66,43 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .title {
 }
 
 .nav-link:hover {
-  color: var(--primary-mint-hover) !important;
+  color: var(--primary-mint) !important;
   transform: translateY(-1px);
 }
 
 /* Hero / Header custom styling */
 header.quarto-title-block {
-  background: linear-gradient(135deg, rgba(120, 194, 173, 0.2) 0%, rgba(244, 251, 249, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(120, 194, 173, 0.08) 0%, rgba(14, 19, 32, 0.8) 100%);
   border-radius: var(--border-radius-lg);
   padding: 3rem 2rem;
   margin-bottom: 3rem;
-  border: 1px solid rgba(120, 194, 173, 0.15);
+  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
 }
 
-.title-block-banner {
-  background: linear-gradient(135deg, rgba(120, 194, 173, 0.3) 0%, rgba(244, 251, 249, 0.9) 100%) !important;
-  border-bottom: 2px solid rgba(120, 194, 173, 0.2);
+.quarto-title-banner, .title-block-banner {
+  background: linear-gradient(135deg, rgba(120, 194, 173, 0.05) 0%, rgba(10, 13, 22, 0.95) 100%) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.quarto-title-banner h1, .quarto-title-banner .subtitle {
+  color: #ffffff !important;
 }
 
 /* Grid layout & custom cards styling */
 .quarto-grid-item {
-  border: 1px solid rgba(120, 194, 173, 0.15) !important;
+  border: 1px solid var(--border-color) !important;
   border-radius: var(--border-radius-md) !important;
-  background-color: #ffffff !important;
+  background-color: var(--bg-card) !important;
   box-shadow: var(--shadow-sm) !important;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
   overflow: hidden;
 }
 
 .quarto-grid-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg) !important;
-  border-color: var(--primary-mint) !important;
+  border-color: rgba(120, 194, 173, 0.4) !important;
 }
 
 .quarto-grid-item .card-img-top {
@@ -92,6 +117,24 @@ header.quarto-title-block {
   padding: 1.5rem !important;
 }
 
+/* Typography styles for grid elements */
+.quarto-grid-item .card-title, 
+.quarto-grid-item .listing-title,
+.quarto-grid-item a {
+  color: #ffffff !important;
+}
+
+.quarto-grid-item .card-text,
+.quarto-grid-item .listing-description {
+  color: var(--text-muted) !important;
+}
+
+.quarto-grid-item .card-attribution,
+.quarto-grid-item .listing-date,
+.quarto-grid-item .listing-author {
+  color: var(--text-muted) !important;
+}
+
 /* Category Filter Badges / Pills styling */
 .quarto-category {
   font-family: 'Outfit', sans-serif;
@@ -100,8 +143,8 @@ header.quarto-title-block {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background-color: var(--primary-mint-light) !important;
-  color: var(--primary-mint-hover) !important;
-  border: 1px solid rgba(120, 194, 173, 0.3) !important;
+  color: var(--primary-mint) !important;
+  border: 1px solid rgba(120, 194, 173, 0.25) !important;
   padding: 0.35em 0.85em !important;
   border-radius: 50px !important;
   margin-right: 0.4rem !important;
@@ -111,7 +154,7 @@ header.quarto-title-block {
 
 .quarto-category:hover, a.quarto-category:hover {
   background-color: var(--primary-mint) !important;
-  color: #ffffff !important;
+  color: var(--bg-soft) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(120, 194, 173, 0.3);
   text-decoration: none !important;
@@ -122,7 +165,7 @@ header.quarto-title-block {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   color: var(--text-dark);
-  border-bottom: 2px solid var(--primary-mint);
+  border-bottom: 1px solid rgba(120, 194, 173, 0.3);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -137,9 +180,9 @@ header.quarto-title-block {
 .about-entity {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(120, 194, 173, 0.05) 100%);
+  background: linear-gradient(180deg, rgba(5,8,12,0) 0%, rgba(120, 194, 173, 0.03) 100%);
   border-radius: var(--border-radius-lg);
-  border: 1px solid rgba(120, 194, 173, 0.1);
+  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
 }
 
@@ -149,13 +192,13 @@ header.quarto-title-block {
   border-radius: 50px !important;
   padding: 0.5rem 1.2rem !important;
   border: 1px solid var(--primary-mint) !important;
-  color: var(--primary-mint-hover) !important;
+  color: var(--primary-mint) !important;
   transition: all 0.3s ease !important;
 }
 
 .about-link:hover {
   background-color: var(--primary-mint) !important;
-  color: white !important;
+  color: var(--bg-soft) !important;
   box-shadow: 0 4px 12px rgba(120, 194, 173, 0.25);
   transform: translateY(-2px);
 }
@@ -167,15 +210,107 @@ pre, code {
 }
 
 div.sourceCode {
+  background-color: #0a0d16 !important;
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-sm);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Callout blocks custom styling */
 .callout {
   border-left-color: var(--primary-mint) !important;
   border-radius: var(--border-radius-sm);
-  background-color: var(--bg-soft);
-  border: 1px solid rgba(120, 194, 173, 0.15);
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
   border-left-width: 5px !important;
+  color: var(--text-dark) !important;
+}
+
+.callout-header {
+  background-color: rgba(120, 194, 173, 0.08) !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.callout-title-container {
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+.callout-icon-container {
+  color: var(--primary-mint) !important;
+}
+
+.callout-body {
+  padding: 1rem !important;
+  background-color: transparent !important;
+}
+
+/* TOC / Sidebar styling */
+#TOC {
+  border-left: 1px solid var(--border-color);
+  padding-left: 1rem;
+}
+
+#TOC a {
+  color: var(--text-muted) !important;
+}
+
+#TOC a:hover {
+  color: var(--primary-mint) !important;
+  text-decoration: none;
+}
+
+#TOC .active {
+  color: var(--primary-mint) !important;
+  font-weight: 600;
+}
+
+/* Quarto Search Modal Dark Adjustments */
+.modal-content {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-dark) !important;
+}
+
+.modal-header, .modal-footer {
+  border-color: var(--border-color) !important;
+}
+
+.search-results {
+  background-color: var(--bg-card) !important;
+}
+
+.search-item {
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-dark) !important;
+}
+
+.search-item:hover {
+  background-color: var(--primary-mint-light) !important;
+}
+
+.form-control, .search-input {
+  background-color: var(--bg-soft) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-dark) !important;
+}
+
+.form-control:focus, .search-input:focus {
+  border-color: var(--primary-mint) !important;
+  box-shadow: 0 0 0 0.25rem rgba(120, 194, 173, 0.25) !important;
+  background-color: var(--bg-soft) !important;
+  color: var(--text-dark) !important;
+}
+
+/* Footer Customization */
+footer {
+  border-top: 1px solid var(--border-color) !important;
+  background-color: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+}
+
+footer a {
+  color: var(--primary-mint) !important;
 }
